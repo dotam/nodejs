@@ -1,0 +1,13 @@
+{
+  "name": "01_mongodb",
+  "version": "0.0.0",
+  "description": "01_mongodb",
+  "main": "app.js",
+  "author": {
+    "name": "Tam",
+    "email": ""
+  },
+  "dependencies": {
+    "mongodb": "*"
+  }
+}
