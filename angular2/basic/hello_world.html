@@ -1,0 +1,4 @@
+<label>Name: </label>
+<input type="text" [(ngModel)]="yourName"  placeholder="Enter a name here">
+<hr/>
+<h1 [hidden]="!yourName">Your name is {{yourName}} </h1>

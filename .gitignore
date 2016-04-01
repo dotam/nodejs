@@ -1,0 +1,9 @@
+angular2/quickstart/node_modules
+angular2/angular2-tour-of-heroes/node_modules
+07_activemq/node_modules
+01_mongodb/node_modules/
+02_http_fs/node_modules/
+03_socketio/node_modules/
+04_express/node_modules/
+05_request/node_modules/
+06_gcm/node_modules/
