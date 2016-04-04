@@ -1,19 +1,19 @@
-import {Component} from "angular2/core";
+import {Component,Input} from 'angular2/core';
 import {Hero} from './hero';
-@Component ({
-	selector: "my-app",
+@Component({
+	selector: "my-hero-detail",
 	template:`
-	<div *ngIf="selectedHero">
-		<h2>select hero {{selectedHero.name}}</h2>
-		<div><label>id: </label>{{selectedHero.id}}</div>
+	<div *ngIf="hero">
+		<h2>select hero {{hero.name}}</h2>
+		<div><label>id: </label>{{hero.id}}</div>
 		<div>
 		    <label>name: </label>
-		    <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+		    <input [(ngModel)]="hero.name" placeholder="name"/>
 		</div>
 	</div>
 	<h2>My heroes</h2>
 	<ul class="heroes">
-		<li *ngFor="#hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+		<li *ngFor="#hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === hero">
 			<span class="badge"> {{hero.id}} </span> {{hero.name}}
 		</li>
 	</ul>
@@ -67,17 +67,17 @@ import {Hero} from './hero';
     border-radius: 4px 0 0 4px;
   }
 `]
-
 })
-export class AppComponent{
+export class HeroDetailComponent{
 	title = "Tous of Heroes";
-	selectedHero : Hero ;
+	hero : Hero ;
 	public heroes = HEROES;
 	onSelect(hero: Hero){
-		this.selectedHero = hero;
+		this.hero = hero;
 	}
 }
  
+
 var HEROES: Hero [] = [
 	{id: 1 , name: "Nam 1"},
 	{id: 2 , name: "Nam 22"},

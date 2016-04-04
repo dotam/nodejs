@@ -11,7 +11,7 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent, Hero, HEROES;
+    var AppComponent, HEROES;
     return {
         setters:[
             function (core_1_1) {
@@ -37,12 +37,6 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 return AppComponent;
             }());
             exports_1("AppComponent", AppComponent);
-            Hero = (function () {
-                function Hero() {
-                }
-                return Hero;
-            }());
-            exports_1("Hero", Hero);
             HEROES = [
                 { id: 1, name: "Nam 1" },
                 { id: 2, name: "Nam 22" },
