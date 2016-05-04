@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<canvas id="c" width="1000" height="500" style="border: 1px solid black;"></canvas>
+<button onclick="save();">save</button>
+
+<script type="text/javascript" src="fabric.min.js"></script>
+<script type="text/javascript">
+// create a wrapper around native canvas element (with id="c")
+var canvas = new fabric.Canvas('c');
+
+// create a rectangle object
+var rect = new fabric.Rect({
+  left: 100,
+  top: 100,
+  fill: 'red',
+  width: 20,
+  height: 20
+});
+
+// "add" rectangle onto canvas
+canvas.add(rect);
+var save =function(){
+	alert('left=' + rect.left + '  width=' + rect.width + '  scaleX=' + rect.scaleX);
+	console.log(rect);
+};
+</script>
+</body>
+</html>
